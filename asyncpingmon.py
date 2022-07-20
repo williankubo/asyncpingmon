@@ -5,6 +5,9 @@ import sys
 import time
 output_stream = sys.stdout
 
+# https://github.com/williankubo/asyncpingmon/
+# https://raw.githubusercontent.com/williankubo/asyncpingmon/main/asyncpingmon.py
+
 ## custom variables
 
 version = "v0.1"

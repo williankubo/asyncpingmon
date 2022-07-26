@@ -24,12 +24,17 @@ if len(sys.argv) < 2:
     print()
     print("-= AsyncPingMonitor", version , "=-")
     print()
-    print("usage: python3 asyncpingmon.py [ip_list_file]")
+    print("usage: python3 asyncpingmon.py [ip_list_file] [title (optional)]")
     print()
     print("minimal version: Python 3.6")
     print()
     print()
     sys.exit() # and close program
+
+title = ""
+
+if len(sys.argv) == 3:
+    title = sys.argv[2]
 
 # receive argument in variable
 INPUT_FILE = sys.argv[1]
@@ -142,7 +147,8 @@ while True:
 
         clearConsole()
         #print(time_range)
-        print("-= AsyncPingMonitor", version , "=-")
+        #print("[", title , "- AsyncPingMonitor", version , "]")
+        print(f'[ {bcolors.OKCYAN}{title}{bcolors.ENDC} - AsyncPingMonitor {version} ]')
         print()
 
         for index2 in range(len(new_data)):
@@ -161,7 +167,8 @@ while True:
 
             clearConsole()
             #print(time_range)
-            print("-= AsyncPingMonitor", version , "=-")
+            #print("[", title , "- AsyncPingMonitor", version , "]")
+            print(f'[ {bcolors.OKCYAN}{title}{bcolors.ENDC} - AsyncPingMonitor {version} ]')
             print()
 
             for index2 in range(len(new_data)):

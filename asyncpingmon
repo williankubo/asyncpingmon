@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 asyncpingmon.py $1 $2
+python3 asyncpingmon.py $1 $2 %3
